@@ -1,0 +1,276 @@
+/* Обнуление */
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    font-family: Poppins;
+    line-height: 150%;
+    font-size: 16px;
+    color: #000;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/* ----------------------------Контейнер------------------------------ */
+
+._container {
+    max-width: 1668px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* ----------------------------Шапка----------------------------------- */
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    min-height: 260px;
+}
+
+.logo {
+    position: relative;
+    top: -5px;
+    margin-top: 20px;
+    margin-left: 55px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 150%;
+    color: #58A9A5;
+}
+
+.logo::before {
+    display: inline-block;
+    position: absolute;
+    left: -55px;
+    content: "";
+    width: 45px;
+    height: 53px;
+    background-image: url(img/logo.png);
+    background-size: cover;
+}
+
+.header__menu {
+    margin: 0 0 0 5.15%;
+    padding-right: 10px;
+    width: 39%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    padding: 10px 10px 10px 10px;
+}
+
+.menu__item {
+    box-sizing: content-box;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu__link {
+    position: relative;
+    font-weight: 400;
+    font-size: 25px;
+    color: #404242;
+}
+
+.menu__link:hover {
+    font-weight: 700;
+}
+
+.menu__link.active::before {
+    position: absolute;
+    left: 19%;
+    bottom: -5px;
+    display: block;
+    content: "";
+    width: 62%;
+    height: 6px;
+    background-color: #FEC62D;
+    border-radius: 21px;
+
+}
+
+.active {
+    font-weight: 700;
+    color: #58A9A5;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 271px;
+    height: 80px;
+    padding: 21px 0;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #fff;
+    background-color: #58A9A5;
+    border-radius: 15px;
+}
+
+.header__btn {
+    margin: 0 1.5% 0 0;
+    min-width: 140px;
+}
+
+@media (max-width: 1024px) {
+    .header__container {
+        min-height: 200px;
+    }
+
+    .header__btn {
+        width: 200px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 560px) {
+    .header__container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .header__btn {
+        margin: 0 1.5% 0 auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .header__container {
+        flex-direction: column;
+    }
+
+    .header__btn {
+        margin: 0 1.5% 0 0;
+    }
+}
+/* -----------------------------Секция "Услуги"-------------------------------- */
+
+.services {
+    display: flex;
+    align-items: flex-start;
+}
+
+.services__description {
+    max-width: 50%;
+    padding-right: 80px;
+}
+
+.services__description h2 {
+    margin-bottom: 50px;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 150%;
+}
+
+.services__description p {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 150%;
+}
+
+.services__btn {
+    border-radius: 15px 15px 15px 0;
+}
+
+.services__image {
+    position: relative;
+}
+
+.services__image svg {
+    position: absolute;
+    z-index: -10;
+}
+
+.services__image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1279px) {
+    .services__description h2 {
+        font-size: 50px;
+    }
+
+    .services__description p {
+        font-size: 21.5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .services__description {
+        max-width: 100%;
+    }
+
+    .services__description h2 {
+        margin-bottom: 30px;
+    }
+
+    .services__description p {
+        margin-bottom: 30px;
+    }
+
+    .services__btn {
+        width: 200px;
+        height: 70px;
+    }
+
+    .services__image {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services__description h2 {
+        font-size: 40px;
+    }
+
+    .services__description p {
+        font-size: 17px;
+    }
+
+    .services__image {
+        max-width: 400px;
+    }
+}
